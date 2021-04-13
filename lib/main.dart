@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/Formpage.dart';
+import 'package:helloworld/HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,7 +49,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+  int _selectedIndex = 0;
+  final List<Widget> _widgetOptions = [
+    HomePage(),
+    Formpage(),
+    HomePage(),
+    HomePage(),
+  ];
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -59,138 +67,40 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
-        ),
-        body: Container(
-          child: Column(
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(20.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(20.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(20.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(20.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      width: MediaQuery.of(context).size.width * 0.75,
-                      color: Colors.green,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 70,
-                            width: 40,
-                            color: Colors.blue,
-                          ),
-                          Container(
-                            height: 70,
-                            width: 40,
-                            color: Colors.blue,
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ],
+      appBar: AppBar(
+        title: const Text('BottomNavigationBar Sample'),
+      ),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Assignment 2',
           ),
-        ));
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Form',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Assignment3 ',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
+      ),
+    );
   }
 }
