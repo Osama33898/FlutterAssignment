@@ -96,7 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.school),
             label: 'Assignment3 ',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Assignment4 ',
+          ),
         ],
+        type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,

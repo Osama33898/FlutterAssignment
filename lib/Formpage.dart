@@ -84,7 +84,7 @@ class _FormpageState extends State<Formpage> {
               ),
               TextFormField(
                 controller: emailController,
-                decoration: InputDecoration(labelText: 'E-Mail'),
+                decoration: InputDecoration(labelText: 'Email'),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {
                   //Validator
