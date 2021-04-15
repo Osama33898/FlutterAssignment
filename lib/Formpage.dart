@@ -46,10 +46,6 @@ class _FormpageState extends State<Formpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Form Validation"),
-        leading: Icon(Icons.filter_vintage),
-      ),
       //body
       body: Padding(
         padding: const EdgeInsets.all(16.0),

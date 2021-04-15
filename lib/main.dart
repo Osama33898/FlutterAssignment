@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/Formpage.dart';
+import 'package:helloworld/HeroAnimation%20.dart';
 import 'package:helloworld/HomePage.dart';
+import 'package:helloworld/ListPage.dart';
+import 'package:helloworld/VerticalCardPagerDemo.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,8 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _widgetOptions = [
     HomePage(),
     Formpage(),
-    HomePage(),
-    HomePage(),
+    HeroAnimation(),
+    HeroAnimation(),
   ];
   void _incrementCounter() {
     setState(() {
@@ -109,3 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+// "configurations": [
+// 	{
+// 		"name": "Flutter",
+// 		"request": "launch",
+// 		"type": "dart",
+// 		"flutterMode": "debug"
+// 	}
+// ]
+// //launch.json

@@ -28,130 +28,125 @@ class _MyHomePageState extends State<HomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text("hello"),
-        ),
         body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    )
-                  ],
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            height: MediaQuery.of(context).size.height * 0.15,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    )
-                  ],
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: 70,
-                      width: 40,
-                      color: Colors.blue,
-                    )
-                  ],
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.grey,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(20.0),
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      width: MediaQuery.of(context).size.width * 0.75,
-                      color: Colors.green,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 70,
-                            width: 40,
-                            color: Colors.blue,
-                          ),
-                          Container(
-                            height: 70,
-                            width: 40,
-                            color: Colors.blue,
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ],
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
+                )
+              ],
+            ),
           ),
-        ));
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            height: MediaQuery.of(context).size.height * 0.15,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
+                ),
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
+                )
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            height: MediaQuery.of(context).size.height * 0.15,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
+                ),
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 70,
+                  width: 40,
+                  color: Colors.blue,
+                )
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            height: MediaQuery.of(context).size.height * 0.15,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  width: MediaQuery.of(context).size.width * 0.75,
+                  color: Colors.green,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.15,
+                        width: 40,
+                        color: Colors.blue,
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.15,
+                        width: 40,
+                        color: Colors.blue,
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    ));
   }
 }
